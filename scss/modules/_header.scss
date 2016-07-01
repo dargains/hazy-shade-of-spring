@@ -2,12 +2,46 @@ header {
     .container {
         .row {
             line-height: 50px;
+
             nav {
-                background-color: red;
+                a {
+                    display: inline-block;
+                }
+                ul {
+                    display: inline-block;
+                    background-color: red;
+                    li {
+                        display: inline-block;
+                        margin: 0 20px;
+                    }
+                }
             }
             aside {
                 background-color: green;
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
             }
         }
     }
+}
+
+.teste {
+    div {
+        width: 300px;
+        background-color: green;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .b1 {
+        height: 300px;
+    }
+    .b2 {
+        line-height: 200px;
+    }
+    .b3 {
+        height: 400px;
+    }
+
 }
