@@ -57,3 +57,30 @@
         }
     }
 }
+
+//media queries (que funcionam!!!111!!)
+$phone: 512px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+@mixin phone {
+    @media (min-width: 0px) and (max-width: #{$phone+1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$phone}) and (max-width: #{$tablet+1px}) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: #{$tablet}) and (max-width: #{$laptop+1px}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$laptop+1})  {
+        @content;
+    }
+}

@@ -6,4 +6,8 @@ $(document).ready(function () {
         $(".teste").load("modules/teste.html");
         //$("footer").load("modules/footer.html");
     });
+
+    $(".menu").on('click', function(){
+        $("aside").show();
+    });
 });

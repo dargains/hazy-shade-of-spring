@@ -57,33 +57,89 @@ html,
 body {
   height: 100%; }
 
-header .container .row {
-  line-height: 50px; }
-  header .container .row nav a {
-    display: inline-block; }
-  header .container .row nav ul {
-    display: inline-block;
-    background-color: red; }
-    header .container .row nav ul li {
+header {
+  background-color: #e5e5e5;
+  z-index: 20; }
+  header .wrapper {
+    width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+    header .wrapper a {
       display: inline-block;
-      margin: 0 20px; }
-  header .container .row aside {
-    background-color: green; }
-    header .container .row aside li {
+      width: 60px;
+      line-height: 60px;
+      background-color: #333;
+      color: #fff;
+      text-align: center; }
+    header .wrapper nav ul {
       display: inline-block;
-      margin: 0 10px; }
-
-.teste div {
-  width: 300px;
-  background-color: green;
-  display: inline-block;
-  vertical-align: middle; }
-.teste .b1 {
-  height: 300px; }
-.teste .b2 {
-  line-height: 200px; }
-.teste .b3 {
-  height: 400px; }
+      background-color: red; }
+      header .wrapper nav ul li {
+        display: inline-block;
+        margin: 0 20px; }
+      @media (min-width: 512px) and (max-width: 769px) {
+        header .wrapper nav ul {
+          display: none; } }
+      @media (min-width: 0px) and (max-width: 513px) {
+        header .wrapper nav ul {
+          display: none; } }
+    header .wrapper aside {
+      background-color: #333; }
+      header .wrapper aside ul li {
+        display: inline-block;
+        margin: 0 10px; }
+      @media (min-width: 512px) and (max-width: 769px) {
+        header .wrapper aside {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 63px;
+          width: 100%;
+          color: #cecece; }
+          header .wrapper aside ul li {
+            display: block;
+            padding: 20px 10px; }
+            header .wrapper aside ul li:not(:last-child) {
+              border-bottom: 1px solid #cecece; } }
+      @media (min-width: 0px) and (max-width: 513px) {
+        header .wrapper aside {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 63px;
+          width: 100%;
+          color: #cecece; }
+          header .wrapper aside ul li {
+            display: block;
+            padding: 20px 10px; }
+            header .wrapper aside ul li:not(:last-child) {
+              border-bottom: 1px solid #cecece; } }
+    header .wrapper .menu {
+      z-index: 10;
+      display: inline;
+      display: none;
+      padding: 10px;
+      border: 1px solid #666; }
+      @media (min-width: 512px) and (max-width: 769px) {
+        header .wrapper .menu {
+          display: block; } }
+      @media (min-width: 0px) and (max-width: 513px) {
+        header .wrapper .menu {
+          display: block; } }
+    @media (min-width: 768px) and (max-width: 1025px) {
+      header .wrapper {
+        width: 768px; } }
+    @media (min-width: 512px) and (max-width: 769px) {
+      header .wrapper {
+        width: 100%;
+        padding: 10px; } }
+    @media (min-width: 0px) and (max-width: 513px) {
+      header .wrapper {
+        width: 100%;
+        padding: 10px; } }
 
 .hero {
   height: 620px;

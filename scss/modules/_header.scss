@@ -1,47 +1,105 @@
 header {
-    .container {
-        .row {
-            line-height: 50px;
-
-            nav {
-                a {
+    background-color: #e5e5e5;
+    z-index: 20;
+    .wrapper {
+        width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        a {
+            display: inline-block;
+            width: 60px;
+            line-height: 60px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        nav {
+            ul {
+                display: inline-block;
+                background-color: red;
+                li {
                     display: inline-block;
+                    margin: 0 20px;
                 }
-                ul {
-                    display: inline-block;
-                    background-color: red;
-                    li {
-                        display: inline-block;
-                        margin: 0 20px;
-                    }
+                @include tablet {
+                    display: none;
+                }
+                @include phone {
+                    display: none;
                 }
             }
-            aside {
-                background-color: green;
+        }
+        aside {
+
+            ul {
                 li {
                     display: inline-block;
                     margin: 0 10px;
                 }
+
+            }
+            background-color: #333;
+                @include tablet {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 63px;
+                    width: 100%;
+                    color: #cecece;
+                    ul {
+                        li {
+                            display: block;
+                            padding: 20px 10px;
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #cecece;
+                            }
+                        }
+                    }
+                }
+                @include phone {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 63px;
+                    width: 100%;
+                    color: #cecece;
+                    ul {
+                        li {
+                            display: block;
+                            padding: 20px 10px;
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #cecece;
+                            }
+                        }
+                    }
+                }
+        }
+        .menu {
+            z-index: 10;
+            display: inline;
+            display: none;
+            padding: 10px;
+            border: 1px solid #666;
+            @include tablet {
+                display: block;
+            }
+            @include phone {
+                display: block;
             }
         }
+        @include laptop {
+            width: $tablet;
+        }
+        @include tablet {
+            width: 100%;
+            padding: 10px;
+        }
+        @include phone {
+            width: 100%;
+            padding: 10px;
+        }
     }
-}
-
-.teste {
-    div {
-        width: 300px;
-        background-color: green;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .b1 {
-        height: 300px;
-    }
-    .b2 {
-        line-height: 200px;
-    }
-    .b3 {
-        height: 400px;
-    }
-
 }
