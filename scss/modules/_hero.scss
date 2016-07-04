@@ -1,9 +1,88 @@
-.hero{
+.hero {
     height: 620px;
-    background: blue;
-    .container{
-        .row{
-            
+    background: lightblue;
+    position: relative;
+    .container-fluid {
+        .row {
+            h1,
+            h2 {
+                text-align: center;
+            }
+            .div-btn {
+                width: 100%;
+                a.btn-standard {
+                    margin: 0 auto;
+                    display: block;
+                    text-align: center;
+                    width: 200px;
+                    line-height: 50px;
+                    border: 2px solid white;
+                }
+            }
+        }
+    }
+}
+
+.nav-square {
+    $size: 25px;
+    $border: ($size - ($size - 2));
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    li {
+        display: inline-block;
+        margin-right: 8px;
+        a {
+            display: block;
+            width: $size;
+            height: $size;
+            border: $border solid #fff;
+            transition: all .3s;
+            border-radius: 2px;
+            overflow: hidden;
+            text-indent: 30px;
+            &:hover {
+                background: white;
+                border: $border solid #f8f8f8;
+            }
+        }
+    }
+}
+
+.text{
+    margin-top: 120px;
+}
+
+.nav-arrows {
+    $height: 60px;
+  
+    li {
+        position: absolute;  
+        height: $height;
+        width: 100%;
+        a {
+            position: absolute;    
+            line-height: $height;
+            width: 20px;
+            text-align: center;
+
+            i {
+//                display: inline-block;
+//                width: 100%;
+            }
+        }
+        &:first-child {
+            a {
+                background: blue;
+                right: 0;
+            }
+        }
+        &:last-child {
+            a {
+                background: yellow;
+                left: 0;
+            }
         }
     }
 }
